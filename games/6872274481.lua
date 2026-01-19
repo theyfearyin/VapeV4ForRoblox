@@ -1,4 +1,5 @@
 local run = function(func)
+	print('skidding')
 	func()
 end
 local cloneref = cloneref or function(obj)
