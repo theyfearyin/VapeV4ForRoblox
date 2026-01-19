@@ -9347,4 +9347,43 @@ run(function()
 	})
 end)
 
+	run(function()
+    local char = lplr.Character or lplr.CharacterAdded:wait()
+    local Headless = {Enabled = false}
+    local faceTransparencyBackup = nil
 
+    Headless = vape.Categories.Utility:CreateModule({
+        PerformanceModeBlacklisted = true,
+        Name = 'Headless',
+        Tooltip = 'Free Headless Head',
+        Function = function(callback)
+            if callback then
+                task.spawn(function()
+                    repeat 
+                        task.wait()
+                        if entitylib.isAlive and entitylib.character.Character and entitylib.character.Head then
+                            entitylib.character.Head.Transparency = 1
+
+                            local face = entitylib.character.Head:FindFirstChild('face')
+                            if face and face:IsA("Decal") and faceTransparencyBackup == nil then
+                                faceTransparencyBackup = face.Transparency
+                                face.Transparency = 1
+                            end
+                        end
+                    until not Headless.Enabled
+                end)
+            else
+                if entitylib.isAlive and entitylib.character.Character and entitylib.character.Head then
+                    entitylib.character.Head.Transparency = 0
+
+                    local face = entitylib.character.Head:FindFirstChild('face')
+                    if face and face:IsA("Decal") and faceTransparencyBackup ~= nil then
+                        face.Transparency = faceTransparencyBackup
+                        faceTransparencyBackup = nil
+                    end
+                end
+            end
+        end,
+        Default = false
+    })
+end)
