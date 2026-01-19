@@ -7,6 +7,11 @@ AccountSystem.Accounts = {
         IsActive = false
     },
     {
+        Username = "shogun",
+        Password = "shoggy",
+        IsActive = false
+    },
+    {
         Username = "yin",
         Password = "longlivejeff",
         IsActive = true
