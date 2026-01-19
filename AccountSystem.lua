@@ -4,11 +4,11 @@ AccountSystem.Accounts = {
     {
         Username = "aero",
         Password = "aero123",
-        IsActive = true
+        IsActive = false
     },
     {
         Username = "yin",
-        Password = "yin123",
+        Password = "longlivejeff",
         IsActive = true
     },
 }
