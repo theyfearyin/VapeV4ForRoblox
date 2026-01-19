@@ -4,7 +4,7 @@ AccountSystem.Accounts = {
     {
         Username = "aero",
         Password = "aero123",
-        IsActive = false
+        IsActive = true
     },
     {
         Username = "shogun",
