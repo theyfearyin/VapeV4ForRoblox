@@ -11,7 +11,6 @@ AccountSystem.Accounts = {
         Password = "longlivejeff",
         IsActive = true
     },
-}
     {
         Username = "solo",
         Password = "solovvsx",
@@ -21,5 +20,7 @@ AccountSystem.Accounts = {
         Username = "ylnyang",
         Password = "RulerofZeeseas",
         IsActive = true
-    },
+    }
+}
+
 return AccountSystem
